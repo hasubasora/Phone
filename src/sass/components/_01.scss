@@ -1,0 +1,24 @@
+.projectList {
+    ul {
+        @include span(12);
+        margin-top: 1rem;
+        li {
+            @include span(12);
+            // outline: 1px solid red;
+            margin-bottom: .3rem;
+            background: #fff;
+            a {
+                @include span(12);
+                display: block;
+                @include height(2.3rem);
+                @include text-hide();
+                font-size: .8rem;
+                text-indent: 1rem;
+            }
+        }
+    }
+}
+
+.body {
+    background: rgba(45, 47, 46, 0.99);
+}

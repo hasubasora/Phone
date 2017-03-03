@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
+    <script type="text/javascript" src="javascripts/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/BigOrder.js"></script>
+    <title>项目详情</title>
+    <style>
+        .inner_box {
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body class="bgf10">
+
+    <section class="particulars">
+        <ul>
+            <li>
+                <span>布置日期</span><span>2007-11-21</span>
+            </li>
+            <li> <span>事项内容</span><span>招招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标标</span></li>
+            <li> <b class="green">全过程跟踪</b></li>
+        </ul>
+    </section>
+    <section class="particulars ">
+        <ul>
+            <li>
+                <span>专业</span>
+                <span>专业</span>
+            </li>
+            <li>
+                <span>我部专业负责人</span>
+                <span>专业</span>
+            </li>
+            <li>
+                <span>设计院专业负责人</span>
+                <span>专业</span>
+            </li>
+            <li>
+                <span>相关部门负责人</span>
+                <span>暂无</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="particulars ">
+        <ul>
+            <li>
+                <span>完成时限</span>
+                <span>2003-22-34</span>
+            </li>
+            <li>
+                <span>完成状况</span>
+                <span>专业</span>
+            </li>
+            <li> <span><b class="pink">超期</b></span></li>
+
+        </ul>
+    </section>
+
+    <section class="particulars ">
+        <ul>
+            <li>
+                <span>是否完成</span>
+                <span><b class="pink">超期</b></span>
+            </li>
+            <li>
+                <span>我部专业负责人</span>
+                <span>专业</span>
+            </li>
+            <li>
+                <span>设计院专业负责人</span>
+                <span><b class="pink">超期</b></span>
+            </li>
+
+        </ul>
+    </section>
+
+</body>
+
+</html>
+
+<script>
+    //    var box=document.querySelector(".banner").style.transform="rotate(360deg)";
+    var box = document.querySelector(".banner");
+    // 初始化
+    var x = 0,
+        startX = 0,
+        scroll = 0;
+    // 处理默认事件
+    box.addEventListener("touchmove", function(e) {
+        e.preventDefault();
+    })
+    box.addEventListener("touchstart", function(e) {
+            x = e.changedTouches[0].pageX; //涉及当前事件的手指列表    
+            startX = scroll;
+        })
+        // box.addEventListener("touchstart",function (e) {
+        //    box.style.transform="rotatex(360deg)"
+        // })
+    box.addEventListener("touchmove", function(e) {
+        // box.style.transform="rotateY(60deg)"
+        var xL = e.changedTouches[0].pageX - x;
+        scroll = startX + xL;
+        this.style.transform = "rotateY(" + scroll + "deg)";
+    })
+    box.addEventListener("touchend", function(e) {
+        var xL = e.changedTouches[0].pageX - x;
+        scroll = startX + xL;
+        var n = -scroll / 100;
+
+        console.log(n)
+        this.style.transform = "rotateY(" + scroll + "deg)";
+
+    })
+</script>

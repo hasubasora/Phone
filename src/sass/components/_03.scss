@@ -1,0 +1,43 @@
+.projectFile {
+    @include border-radius(8px);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: #fff;
+    h2 {
+        @include span(12);
+        padding: 0 27px;
+        font-size: 1rem;
+        font-weight: 600;
+        @include height();
+        border-bottom: 2px dashed rgb(238, 238, 238);
+        @include text-hide();
+    }
+    ul {
+        li {
+            padding: 20px;
+            a {
+                @include span(12);
+                .div {
+                    @include span(12);
+                    background: url('../images/xq.png') no-repeat center;
+                    background-size: contain;
+                    height: 30px;
+                    margin-bottom: 8px;
+                }
+                .pic {
+                    background: url('../images/jz.png') no-repeat center;
+                    background-size: contain;
+                }
+                span {
+                    @include span(12);
+                    text-align: center;
+                }
+            }
+            @include span(6);
+        }
+    }
+}
+
+.bgf10 {
+    background: rgb(238, 238, 238);
+}

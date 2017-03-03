@@ -1,0 +1,76 @@
+.projectDetailed {
+    @include border-radius(10px);
+    background: rgb(238, 238, 238);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    h2 {
+        @include span(12);
+        font-size: 1rem;
+        font-weight: 600;
+        text-indent: 15px;
+        @include height();
+        @include text-hide();
+    }
+    ul {
+        @include span(11.5);
+        padding-left: 4.83333%;
+        margin-bottom: 16px;
+        li {
+            font-size: .7rem;
+            background: #fff;
+            @include span(12);
+            padding: .8rem;
+            margin-bottom: .3rem;
+            a {
+                @include span(12);
+            }
+            .titles {
+                line-height: 19px;
+                padding-bottom: 10px;
+                i {
+                    @include span(4.5);
+                    line-height: 1rem;
+                    height: 1rem;
+                    padding-left: 20px;
+                    background: url('../images/1.png') no-repeat;
+                    background-size: contain;
+                }
+                b {
+                    float: right;
+                    margin-left: .3rem;
+                    padding: .14rem .6rem;
+                    &.green {
+                        background: #22af25;
+                        @extend .colors;
+                    }
+                    &.red {
+                        background: #dd1111;
+                        @extend .colors;
+                    }
+                    &.pink {
+                        background: #ec1470;
+                        @extend .colors;
+                    }
+                    &.yellow {
+                        background: #ffb320;
+                        @extend .colors;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pojList {
+    width: 2rem;
+    height: 2rem;
+    background: url('../images/gd.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: .8rem;
+    top: 1.2rem;
+}
+
+.colors {
+    color: #fff;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
+    <script type="text/javascript" src="javascripts/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/BigOrder.js"></script>
+    <title>项目详情</title>
+    <style>
+        .inner_box {
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body class="bgf10">
+    <!--片段开始-->
+    <section class="project">
+        <div class="img">
+            <img src="../images/timg.png" alt="">
+            <span>天之武项目</span>
+        </div>
+        <div class="projectText">
+            积分即可到付款即可开发的刘女士你发的是哪个复健科；你发的进口量546344看见你dsndfmv们的反馈么
+        </div>
+    </section>
+    <section class="project detailedList">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>地下面积</span>
+                    <span>1000M²</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>人防面积</span>
+                    <span>1000M²</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>停车位数量</span>
+                    <span>1000个</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>其他</span>
+                    <span>暂无</span></a>
+            </li>
+        </ul>
+    </section>
+    <!--片段结束-->
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    //    var box=document.querySelector(".banner").style.transform="rotate(360deg)";
+    var box = document.querySelector(".banner");
+    // 初始化
+    var x = 0,
+        startX = 0,
+        scroll = 0;
+    // 处理默认事件
+    box.addEventListener("touchmove", function(e) {
+        e.preventDefault();
+    })
+    box.addEventListener("touchstart", function(e) {
+            x = e.changedTouches[0].pageX; //涉及当前事件的手指列表    
+            startX = scroll;
+        })
+        // box.addEventListener("touchstart",function (e) {
+        //    box.style.transform="rotatex(360deg)"
+        // })
+    box.addEventListener("touchmove", function(e) {
+        // box.style.transform="rotateY(60deg)"
+        var xL = e.changedTouches[0].pageX - x;
+        scroll = startX + xL;
+        this.style.transform = "rotateY(" + scroll + "deg)";
+    })
+    box.addEventListener("touchend", function(e) {
+        var xL = e.changedTouches[0].pageX - x;
+        scroll = startX + xL;
+        var n = -scroll / 100;
+
+        console.log(n)
+        this.style.transform = "rotateY(" + scroll + "deg)";
+
+    })
+</script>
