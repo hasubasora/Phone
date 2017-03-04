@@ -1,1 +1,17 @@
-.particulars {}
+.particulars {
+    @include span(12);
+    background: #fff;
+    ul {
+        @include span(12);
+        li {
+            @include span(12);
+            span {
+                @include span(6);
+            }
+            b {
+                @include span(6);
+                text-align: right;
+            }
+        }
+    }
+}
