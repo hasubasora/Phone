@@ -5,8 +5,16 @@
         @include span(12);
         li {
             @include span(12);
+            border-bottom: 1px solid red;
+            line-height: 40px;
+            &:nth-of-type(1) {
+                line-height: 40px;
+            }
             span {
                 @include span(6);
+                &:nth-of-type(2) {
+                    line-height: 40px;
+                }
             }
             b {
                 @include span(6);
