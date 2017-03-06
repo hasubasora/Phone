@@ -1,1 +1,48 @@
-.particulars {}
+.particulars {
+    font-size: .8rem;
+    ul {
+        @include span(12);
+        background: #fff;
+        margin-bottom: 5px;
+        li {
+            @include span(12);
+            border-bottom: 1px solid rgb(238, 238, 238);
+            padding: .5rem;
+            line-height: 1.2rem;
+            height: auto;
+            span {
+                @include span(6);
+                &:nth-last-of-type(1) {
+                    text-align: right;
+                }
+            }
+            b {
+                line-height: 1.2rem;
+            }
+        }
+    }
+}
+
+.particularsList {
+    ul {
+        li {
+            &:nth-of-type(2) {
+                height: auto;
+                border-bottom: 2px dashed #eee;
+                span {
+                    @include span(3.5);
+                    &:nth-last-of-type(1) {
+                        @include span(8.5);
+                        line-height: 1.2rem;
+                        text-align: left;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.colors {
+    color: #fff;
+}

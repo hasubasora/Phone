@@ -219,7 +219,7 @@ html span {
   padding-right: 0.83333%;
   font-size: 1rem;
   font-weight: 600;
-  text-indent: 15px;
+  text-indent: 1rem;
   height: 2.5rem;
   line-height: 2.5rem;
   overflow: hidden;
@@ -251,7 +251,7 @@ html span {
   padding-right: 0.83333%;
 }
 .projectDetailed ul li .titles {
-  line-height: 19px;
+  line-height: 1.1rem;
   padding-bottom: 10px;
 }
 .projectDetailed ul li .titles i {
@@ -268,19 +268,54 @@ html span {
 .projectDetailed ul li .titles b {
   float: right;
   margin-left: .3rem;
-  padding: .14rem .6rem;
 }
-.projectDetailed ul li .titles b.green {
+
+.green {
+  padding: 0.14rem 0.6rem;
   background: #22af25;
+  color: #fff;
 }
-.projectDetailed ul li .titles b.red {
+
+.red {
+  padding: 0.14rem 0.6rem;
   background: #dd1111;
+  color: #fff;
 }
-.projectDetailed ul li .titles b.pink {
+
+.pink {
+  padding: 0.14rem 0.6rem;
   background: #ec1470;
+  color: #fff;
 }
-.projectDetailed ul li .titles b.yellow {
+
+.yellow {
+  padding: 0.14rem 0.6rem;
   background: #ffb320;
+  color: #fff;
+}
+
+.blue {
+  padding: 0.14rem 0.6rem;
+  background: #4cacde;
+  color: #fff;
+}
+
+.purple {
+  padding: 0.14rem 0.6rem;
+  background: #76428d;
+  color: #fff;
+}
+
+.yes {
+  padding: 0.14rem 1rem;
+  background: #4cacde;
+  color: #fff;
+}
+
+.no {
+  padding: 0.14rem 1rem;
+  background: #ffb320;
+  color: #fff;
 }
 
 .pojList {
@@ -291,10 +326,6 @@ html span {
   position: absolute;
   right: .8rem;
   top: 1.2rem;
-}
-
-.colors, .projectDetailed ul li .titles b.green, .projectDetailed ul li .titles b.red, .projectDetailed ul li .titles b.pink, .projectDetailed ul li .titles b.yellow, .project .img > span {
-  color: #fff;
 }
 
 .projectFile {
@@ -411,4 +442,62 @@ html span {
 }
 .detailedList ul li span:nth-child(2) {
   text-align: right;
+}
+
+.particulars {
+  font-size: .8rem;
+}
+.particulars ul {
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  background: #fff;
+  margin-bottom: 5px;
+}
+.particulars ul li {
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  border-bottom: 1px solid #eeeeee;
+  padding: .5rem;
+  line-height: 1.2rem;
+  height: auto;
+}
+.particulars ul li span {
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+.particulars ul li span:nth-last-of-type(1) {
+  text-align: right;
+}
+.particulars ul li b {
+  line-height: 1.2rem;
+}
+
+.particularsList ul li:nth-of-type(2) {
+  height: auto;
+  border-bottom: 2px dashed #eee;
+}
+.particularsList ul li:nth-of-type(2) span {
+  width: 29.16667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+.particularsList ul li:nth-of-type(2) span:nth-last-of-type(1) {
+  width: 70.83333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  line-height: 1.2rem;
+  text-align: left;
+  height: auto;
+}
+
+.colors, .project .img > span {
+  color: #fff;
 }
