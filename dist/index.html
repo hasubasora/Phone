@@ -2,122 +2,139 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
     <script type="text/javascript" src="javascripts/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="javascripts/BigOrder.js"></script>
-    <title>项目详情</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="framework/swiper.min.css">
+
+    <!-- Demo styles -->
     <style>
-        .inner_box {
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+        
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .swiper-container {
             width: 100%;
-            overflow-x: hidden;
-            overflow-y: scroll;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
         }
     </style>
 </head>
 
-<body class="bgf10">
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
 
-    <section class="particulars">
-        <ul>
-            <li>
-                <span>布置日期</span>
-                <b>2007-11-21</b>
-            </li>
-            <li> <span>事项内容</span><b>招招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标招标标</b></li>
-            <li> <b class="green">全过程跟踪</b></li>
-        </ul>
-    </section>
-    <section class="particulars ">
-        <ul>
-            <li>
-                <span>专业</span>
-                <b>专业</b>
-            </li>
-            <li>
-                <span>我部专业负责人</span>
-                <b>专业</b>
-            </li>
-            <li>
-                <span>设计院专业负责人</span>
-                <b>专业</b>
-            </li>
-            <li>
-                <span>相关部门负责人</span>
-                <b>暂无</b>
-            </li>
-        </ul>
-    </section>
+                <section class="projectDetailed container ">
+                    <h2>一、1深化设计及看样板状况</h2>
+                    <!--90-690-->
+                    <ul>
+                        <li>
+                            <a href="detailed.html">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="red">重要</b> <b class="yellow">未完成</b> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">已完成</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
 
-    <section class="particulars ">
-        <ul>
-            <li>
-                <span>完成时限</span>
-                <span>2003-22-34</span>
-            </li>
-            <li>
-                <span>完成状况</span>
-                <span>专业</span>
-            </li>
-            <li> <span><b class="pink">超期</b></span></li>
+                    </ul>
+                </section>
+                <a href="projectList.html" class="pojList"></a>
 
-        </ul>
-    </section>
 
-    <section class="particulars ">
-        <ul>
-            <li>
-                <span>是否完成</span>
-                <span><b class="pink">超期</b></span>
-            </li>
-            <li>
-                <span>我部专业负责人</span>
-                <span>专业</span>
-            </li>
-            <li>
-                <span>设计院专业负责人</span>
-                <span><b class="pink">超期</b></span>
-            </li>
 
-        </ul>
-    </section>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
 
+    <!-- Swiper JS -->
+    <script src="framework/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            autoHeight: true, //enable auto height
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-    //    var box=document.querySelector(".banner").style.transform="rotate(360deg)";
-    var box = document.querySelector(".banner");
-    // 初始化
-    var x = 0,
-        startX = 0,
-        scroll = 0;
-    // 处理默认事件
-    box.addEventListener("touchmove", function(e) {
-        e.preventDefault();
-    })
-    box.addEventListener("touchstart", function(e) {
-            x = e.changedTouches[0].pageX; //涉及当前事件的手指列表    
-            startX = scroll;
-        })
-        // box.addEventListener("touchstart",function (e) {
-        //    box.style.transform="rotatex(360deg)"
-        // })
-    box.addEventListener("touchmove", function(e) {
-        // box.style.transform="rotateY(60deg)"
-        var xL = e.changedTouches[0].pageX - x;
-        scroll = startX + xL;
-        this.style.transform = "rotateY(" + scroll + "deg)";
-    })
-    box.addEventListener("touchend", function(e) {
-        var xL = e.changedTouches[0].pageX - x;
-        scroll = startX + xL;
-        var n = -scroll / 100;
-
-        console.log(n)
-        this.style.transform = "rotateY(" + scroll + "deg)";
-
-    })
-</script>

@@ -7,7 +7,7 @@
         @include span(12);
         font-size: 1rem;
         font-weight: 600;
-        text-indent: 15px;
+        text-indent: 1rem;
         @include height();
         @include text-hide();
     }
@@ -16,7 +16,7 @@
         padding-left: 4.83333%;
         margin-bottom: 16px;
         li {
-            font-size: .7rem;
+            font-size: 1rem;
             background: #fff;
             @include span(12);
             padding: .8rem;
@@ -25,7 +25,7 @@
                 @include span(12);
             }
             .titles {
-                line-height: 19px;
+                line-height: 1.1rem;
                 padding-bottom: 10px;
                 i {
                     @include span(4.5);
@@ -34,31 +34,50 @@
                     padding-left: 20px;
                     background: url('../images/1.png') no-repeat;
                     background-size: contain;
+                    font-size: .8rem;
                 }
                 b {
                     float: right;
                     margin-left: .3rem;
-                    padding: .14rem .6rem;
-                    &.green {
-                        background: #22af25;
-                        @extend .colors;
-                    }
-                    &.red {
-                        background: #dd1111;
-                        @extend .colors;
-                    }
-                    &.pink {
-                        background: #ec1470;
-                        @extend .colors;
-                    }
-                    &.yellow {
-                        background: #ffb320;
-                        @extend .colors;
-                    }
+                    font-size: .8rem;
                 }
             }
         }
     }
+}
+
+.green {
+    @include tag(#22af25);
+}
+
+.red {
+    @include tag(#dd1111);
+}
+
+.pink {
+    @include tag(#ec1470);
+}
+
+.yellow {
+    @include tag(#ffb320);
+}
+
+.blue {
+    @include tag(#4cacde);
+}
+
+.purple {
+    @include tag(#76428d);
+}
+
+.yes {
+    @include tag(#4cacde,
+    1rem);
+}
+
+.no {
+    @include tag(#ffb320,
+    1rem);
 }
 
 .pojList {
@@ -69,8 +88,4 @@
     position: absolute;
     right: .8rem;
     top: 1.2rem;
-}
-
-.colors {
-    color: #fff;
 }

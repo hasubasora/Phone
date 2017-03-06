@@ -111,6 +111,12 @@ $legacy-support-for-ie:true;
     text-overflow: $ellipsis;
 }
 
+@mixin tag($color, $lf:0.6rem) {
+    padding: .14rem $lf;
+    background: $color;
+    color: #fff;
+}
+
 // @function screen($screen){
 //   @if $screen==lg{
 //      @return (max-width 1180px) (min-width 980px);
