@@ -56,13 +56,13 @@
        $('.boxH').css('max-height', (boxH / 16) + 'rem');
        //        console.log(boxH)
        //        alert((boxH / 16) + 'rem')
-       $('.pojList').on('touchstart', function() {
+       $('.pojList').on('click', function() {
            $('.box').fadeIn();
        })
-       $('.box').on('touchstart', function(event) {
+       $('.box').on('click', function(event) {
            var event = event || e;
            $(this).fadeOut();
-           event.stopPropagation()
+
        });
 
 
