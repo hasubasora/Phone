@@ -4,6 +4,7 @@
     background: #fff;
     .img {
         position: relative;
+        left: 0;
         img {
             width: 100%;
             height: auto;
@@ -15,6 +16,7 @@
             text-align: center;
             position: absolute;
             bottom: 0;
+            left: 0;
             @extend .colors;
         }
     }
@@ -33,7 +35,7 @@
             @include span(12);
             padding-left: 10px;
             padding-right: 10px;
-            line-height: 38px;
+            line-height: 3rem;
             background: #fff;
             border-bottom: 1px solid rgb(238, 238, 238);
             span {

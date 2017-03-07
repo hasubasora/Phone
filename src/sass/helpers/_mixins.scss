@@ -112,7 +112,7 @@ $legacy-support-for-ie:true;
 }
 
 @mixin tag($color, $lf:0.6rem) {
-    padding: .14rem $lf;
+    padding: 0.16rem $lf 0.14rem;
     background: $color;
     color: #fff;
 }

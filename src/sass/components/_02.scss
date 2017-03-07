@@ -15,6 +15,8 @@
         @include span(11.5);
         padding-left: 4.83333%;
         margin-bottom: 16px;
+        overflow-y: scroll;
+        max-height: 24rem;
         li {
             font-size: 1rem;
             background: #fff;
@@ -25,7 +27,7 @@
                 @include span(12);
             }
             .titles {
-                line-height: 1.1rem;
+                line-height: 1.3rem;
                 padding-bottom: 10px;
                 i {
                     @include span(4.5);
@@ -35,6 +37,7 @@
                     background: url('../images/1.png') no-repeat;
                     background-size: contain;
                     font-size: .8rem;
+                    margin-top: 4px;
                 }
                 b {
                     float: right;
@@ -88,4 +91,5 @@
     position: absolute;
     right: .8rem;
     top: 1.2rem;
+    z-index: 999;
 }

@@ -137,6 +137,8 @@ body {
 html *,
 html *:before,
 html *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -176,6 +178,7 @@ html span {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   margin-top: 1rem;
+  position: static;
 }
 .projectList ul li {
   width: 100%;
@@ -184,6 +187,14 @@ html span {
   padding-right: 0.83333%;
   margin-bottom: .3rem;
   background: #fff;
+  display: block;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  text-indent: 1rem;
 }
 .projectList ul li a {
   width: 100%;
@@ -204,8 +215,18 @@ html span {
   background: rgba(45, 47, 46, 0.99);
 }
 
+.box {
+  display: none;
+  background: rgba(45, 47, 46, 0.79);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
 .projectDetailed {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #eeeeee;
@@ -233,6 +254,8 @@ html span {
   padding-right: 0.83333%;
   padding-left: 4.83333%;
   margin-bottom: 16px;
+  overflow-y: scroll;
+  max-height: 24rem;
 }
 .projectDetailed ul li {
   font-size: 1rem;
@@ -251,7 +274,7 @@ html span {
   padding-right: 0.83333%;
 }
 .projectDetailed ul li .titles {
-  line-height: 1.1rem;
+  line-height: 1.3rem;
   padding-bottom: 10px;
 }
 .projectDetailed ul li .titles i {
@@ -265,6 +288,7 @@ html span {
   background: url("../images/1.png") no-repeat;
   background-size: contain;
   font-size: .8rem;
+  margin-top: 4px;
 }
 .projectDetailed ul li .titles b {
   float: right;
@@ -273,49 +297,49 @@ html span {
 }
 
 .green {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #22af25;
   color: #fff;
 }
 
 .red {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #dd1111;
   color: #fff;
 }
 
 .pink {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #ec1470;
   color: #fff;
 }
 
 .yellow {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #ffb320;
   color: #fff;
 }
 
 .blue {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #4cacde;
   color: #fff;
 }
 
 .purple {
-  padding: 0.14rem 0.6rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #76428d;
   color: #fff;
 }
 
 .yes {
-  padding: 0.14rem 1rem;
+  padding: 0.16rem 1rem 0.14rem;
   background: #4cacde;
   color: #fff;
 }
 
 .no {
-  padding: 0.14rem 1rem;
+  padding: 0.16rem 1rem 0.14rem;
   background: #ffb320;
   color: #fff;
 }
@@ -328,10 +352,10 @@ html span {
   position: absolute;
   right: .8rem;
   top: 1.2rem;
+  z-index: 999;
 }
 
 .projectFile {
-  -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
   margin-top: 16px;
@@ -400,6 +424,7 @@ html span {
 }
 .project .img {
   position: relative;
+  left: 0;
 }
 .project .img img {
   width: 100%;
@@ -415,6 +440,7 @@ html span {
   text-align: center;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 .project .projectText {
   padding: 10px 14px;
@@ -433,7 +459,7 @@ html span {
   padding-right: 0.83333%;
   padding-left: 10px;
   padding-right: 10px;
-  line-height: 38px;
+  line-height: 3rem;
   background: #fff;
   border-bottom: 1px solid #eeeeee;
 }
@@ -464,7 +490,7 @@ html span {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   border-bottom: 1px solid #eeeeee;
-  padding: .5rem;
+  padding: .8rem .5rem;
   line-height: 1.2rem;
   height: auto;
 }
@@ -476,6 +502,7 @@ html span {
 }
 .particulars ul li span:nth-last-of-type(1) {
   text-align: right;
+  color: #666;
 }
 .particulars ul li b {
   line-height: 1.2rem;
@@ -483,7 +510,7 @@ html span {
 
 .particularsList ul li:nth-of-type(2) {
   height: auto;
-  border-bottom: 2px dashed #eee;
+  border-bottom: 1px dashed #eee;
 }
 .particularsList ul li:nth-of-type(2) span {
   width: 29.16667%;
@@ -503,4 +530,44 @@ html span {
 
 .colors, .project .img > span {
   color: #fff;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /*text-align: center;*/
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+.colorss {
+  height: inherit;
+  color: #666;
+  -webkit-border-radius: initial;
+  border-radius: initial;
+  opacity: 1;
 }

@@ -3,58 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>项目状况</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="framework/swiper.min.css">
     <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
     <script type="text/javascript" src="javascripts/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="javascripts/BigOrder.js"></script>
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="framework/swiper.min.css">
 
-    <!-- Demo styles -->
+    <!-- Demo styles  -->
     <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-        
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
+
     </style>
 </head>
 
 <body>
+
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -62,8 +26,8 @@
 
                 <section class="projectDetailed container ">
                     <h2>一、1深化设计及看样板状况</h2>
-                    <!--90-690-->
-                    <ul>
+
+                    <ul class="boxH">
                         <li>
                             <a href="detailed.html">
                                 <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
@@ -100,10 +64,14 @@
                                 <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="#">
+                                <p class="titles">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</p>
+                                <p class="titles"><i class="bgUrl">2017-31-31</i> <b class="green">全过程跟踪</b> <b class="pink">超期</b> </p>
+                            </a>
+                        </li>
                     </ul>
                 </section>
-                <a href="projectList.html" class="pojList"></a>
 
 
 
@@ -122,6 +90,15 @@
         <div class="swiper-pagination"></div>
     </div>
 
+    <div class="box">
+        <section class="projectList container ">
+            <ul class="pagination swiper-pagination">
+                <!--<li><a href="#">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</a></li>-->
+
+            </ul>
+        </section>
+    </div>
+    <a href="javascript:void(0)" class="pojList"></a>
     <!-- Swiper JS -->
     <script src="framework/swiper.min.js"></script>
 
@@ -129,10 +106,17 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
+            paginationClickable: true, //点击用
+            uniqueNavElements: false,
+        });
+        var mySwiper = new Swiper('.swiper-container', {
+            pagination: '.pagination',
             paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            autoHeight: true, //enable auto height
+            paginationBulletRender: function(index, className) {
+                // return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<li class="' + className + ' colorss">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</li>'
+            }
+
         });
     </script>
 </body>

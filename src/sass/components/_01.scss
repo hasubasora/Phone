@@ -2,11 +2,17 @@
     ul {
         @include span(12);
         margin-top: 1rem;
+        position: static;
         li {
             @include span(12);
             // outline: 1px solid red;
             margin-bottom: .3rem;
             background: #fff;
+            display: block;
+            @include height(2.3rem);
+            @include text-hide();
+            font-size: 1rem;
+            text-indent: 1rem;
             a {
                 @include span(12);
                 display: block;
@@ -21,4 +27,15 @@
 
 .body {
     background: rgba(45, 47, 46, 0.99);
+}
+
+.box {
+    display: none;
+    background: rgba(45, 47, 46, 0.79);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
 }

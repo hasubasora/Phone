@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "Sass",
-    "Compass"
+    "Compass",
+    "Sass"
   ],
   "author": "cat",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-compass": "^2.1.0",
     "run-sequence": "^1.2.2"
   }
