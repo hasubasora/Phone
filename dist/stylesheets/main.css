@@ -186,6 +186,18 @@ html span {
   padding-right: 0.83333%;
   margin-bottom: .3rem;
   background: #fff;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  display: block;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  text-indent: 1rem;
 }
 .projectList ul li a {
   width: 100%;
