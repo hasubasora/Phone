@@ -176,6 +176,7 @@ html span {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   margin-top: 1rem;
+  position: static;
 }
 .projectList ul li {
   width: 100%;
@@ -184,10 +185,6 @@ html span {
   padding-right: 0.83333%;
   margin-bottom: .3rem;
   background: #fff;
-  width: 100%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
   display: block;
   height: 2.3rem;
   line-height: 2.3rem;

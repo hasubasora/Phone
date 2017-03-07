@@ -2,12 +2,12 @@
     ul {
         @include span(12);
         margin-top: 1rem;
+        position: static;
         li {
             @include span(12);
             // outline: 1px solid red;
             margin-bottom: .3rem;
             background: #fff;
-            @include span(12);
             display: block;
             @include height(2.3rem);
             @include text-hide();
