@@ -92,7 +92,7 @@
 
     <div class="box">
         <section class="projectList container ">
-            <ul class="pagination">
+            <ul class="pagination swiper-pagination">
                 <!--<li><a href="#">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</a></li>-->
 
             </ul>
@@ -106,8 +106,8 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
-            paginationClickable: true,
-
+            paginationClickable: true, //点击用
+            uniqueNavElements: false,
         });
         var mySwiper = new Swiper('.swiper-container', {
             pagination: '.pagination',
@@ -116,6 +116,7 @@
                 // return '<span class="' + className + '">' + (index + 1) + '</span>';
                 return '<li class="' + className + ' colorss">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</li>'
             }
+
         });
     </script>
 </body>
