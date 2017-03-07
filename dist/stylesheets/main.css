@@ -355,6 +355,7 @@ html span {
   position: absolute;
   right: .8rem;
   top: 1.2rem;
+  z-index: 999;
 }
 
 .projectFile {
@@ -532,4 +533,44 @@ html span {
 
 .colors, .project .img > span {
   color: #fff;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /*text-align: center;*/
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+.colorss {
+  height: inherit;
+  color: #666;
+  -webkit-border-radius: initial;
+  border-radius: initial;
+  opacity: 1;
 }
