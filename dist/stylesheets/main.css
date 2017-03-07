@@ -287,49 +287,49 @@ html span {
 }
 
 .green {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #22af25;
   color: #fff;
 }
 
 .red {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #dd1111;
   color: #fff;
 }
 
 .pink {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #ec1470;
   color: #fff;
 }
 
 .yellow {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #ffb320;
   color: #fff;
 }
 
 .blue {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #4cacde;
   color: #fff;
 }
 
 .purple {
-  padding: 0.15rem 0.6rem 0.14rem;
+  padding: 0.16rem 0.6rem 0.14rem;
   background: #76428d;
   color: #fff;
 }
 
 .yes {
-  padding: 0.15rem 1rem 0.14rem;
+  padding: 0.16rem 1rem 0.14rem;
   background: #4cacde;
   color: #fff;
 }
 
 .no {
-  padding: 0.15rem 1rem 0.14rem;
+  padding: 0.16rem 1rem 0.14rem;
   background: #ffb320;
   color: #fff;
 }
@@ -412,7 +412,7 @@ html span {
   background: #fff;
 }
 .project .img {
-  position: relative;
+  position: absolute;
 }
 .project .img img {
   width: 100%;
