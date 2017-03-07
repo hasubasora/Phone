@@ -137,6 +137,8 @@ body {
 html *,
 html *:before,
 html *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -216,7 +218,6 @@ html span {
 }
 
 .projectDetailed {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #eeeeee;
@@ -344,7 +345,6 @@ html span {
 }
 
 .projectFile {
-  -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
   margin-top: 16px;

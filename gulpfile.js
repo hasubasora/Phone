@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create(),
     del = require('del'),
+    autoprefixer = require('gulp-autoprefixer'),
     compass = require('gulp-compass');
 
 gulp.task('default', function() {
@@ -27,7 +28,26 @@ gulp.task('compass', function() {
             console.log(err);
             this.emit('end');
         })
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('./dist/css/')).pipe(autoprefixer({
+            browsers: [
+                'last 22 versions',
+                'Android >= 4.0',
+                'last 5 Chrome versions',
+                'last 5 Explorer versions',
+                'last 3 Safari versions',
+                'Firefox >= 20',
+                'iOS 7',
+                'Firefox ESR',
+                'Explorer >= 8',
+                'Opera >= 42',
+                'Safari >= 8',
+                'last 5 FirefoxAndroid versions',
+                'last 5 ChromeAndroid versions',
+                'last 5 ExplorerMobile versions'
+            ],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./dist/stylesheets/'));
 });
 
 gulp.task('staticFiles', function() {
