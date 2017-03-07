@@ -50,9 +50,11 @@
    }
 
    window.onload = function() {
-       var wh = window.screen.height;
+       //        var wh = window.screen.height;
+       var wh = document.body.clientHeight
        boxH = wh - 90;
        $('.boxH').css('max-height', (boxH / 16) + 'rem');
+       console.log(boxH)
        alert((boxH / 16) + 'rem')
        $('.pojList').on('touchstart', function() {
            $('.box').fadeIn();
