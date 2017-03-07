@@ -278,6 +278,7 @@ html span {
   background: url("../images/1.png") no-repeat;
   background-size: contain;
   font-size: .8rem;
+  margin-top: 4px;
 }
 .projectDetailed ul li .titles b {
   float: right;
@@ -412,7 +413,8 @@ html span {
   background: #fff;
 }
 .project .img {
-  position: absolute;
+  position: relative;
+  left: 0;
 }
 .project .img img {
   width: 100%;
@@ -428,6 +430,7 @@ html span {
   text-align: center;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 .project .projectText {
   padding: 10px 14px;
@@ -477,7 +480,7 @@ html span {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
   border-bottom: 1px solid #eeeeee;
-  padding: .5rem;
+  padding: .8rem .5rem;
   line-height: 1.2rem;
   height: auto;
 }
@@ -497,7 +500,7 @@ html span {
 
 .particularsList ul li:nth-of-type(2) {
   height: auto;
-  border-bottom: 2px dashed #eee;
+  border-bottom: 1px dashed #eee;
 }
 .particularsList ul li:nth-of-type(2) span {
   width: 29.16667%;
