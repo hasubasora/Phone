@@ -5,22 +5,13 @@
         position: static;
         li {
             @include span(12);
-            // outline: 1px solid red;
+            padding: 0 5%;
             margin-bottom: .3rem;
             background: #fff;
             display: block;
-            @include height(2.3rem);
+            @include height(2.5rem);
             @include text-hide();
             font-size: 1rem;
-            text-indent: 1rem;
-            a {
-                @include span(12);
-                display: block;
-                @include height(2.3rem);
-                @include text-hide();
-                font-size: 1rem;
-                text-indent: 1rem;
-            }
         }
     }
 }
@@ -38,7 +29,4 @@
     width: 100%;
     height: 100%;
     z-index: 999;
-    @include breakpoint(max-height 320px) {
-        height: auto;
-    }
 }

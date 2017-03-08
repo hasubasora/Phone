@@ -55,9 +55,6 @@
        boxH = wh - 90;
        var boxLi = $('.box ul li').length * $('.box ul li').height();
        $('.boxH').css('max-height', (boxH / 16) + 'rem');
-
-       console.log(wh)
-       console.log($('.box ul li').length * $('.box ul li').height())
        if (wh < boxLi) {
            $('.box').css('height', 'auto');
        }
