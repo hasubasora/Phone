@@ -28,7 +28,8 @@ gulp.task('compass', function() {
             console.log(err);
             this.emit('end');
         })
-        .pipe(gulp.dest('./dist/css/')).pipe(autoprefixer({
+        .pipe(gulp.dest('./dist/stylesheets/'))
+			.pipe(autoprefixer({
             browsers: [
                 'last 22 versions',
                 'Android >= 4.0',
