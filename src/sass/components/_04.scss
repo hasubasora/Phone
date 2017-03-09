@@ -2,6 +2,10 @@
     font-size: 1rem;
     width: 100%;
     background: #fff;
+    @include breakpoint($big) {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
     .img {
         position: relative;
         left: 0;

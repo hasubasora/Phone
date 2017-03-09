@@ -218,6 +218,12 @@ html span {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+@media (min-width: 1180px) {
+  .projectDetailed {
+    max-width: 1180px;
+    margin: 16px auto 16px;
+  }
+}
 .projectDetailed h2 {
   width: 100%;
   float: left;
@@ -348,6 +354,12 @@ html span {
   margin-bottom: 16px;
   background: #fff;
 }
+@media (min-width: 1180px) {
+  .projectFile {
+    max-width: 1180px;
+    margin: 16px auto 16px;
+  }
+}
 .projectFile h2 {
   width: 100%;
   float: left;
@@ -408,6 +420,12 @@ html span {
   width: 100%;
   background: #fff;
 }
+@media (min-width: 1180px) {
+  .project {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
 .project .img {
   position: relative;
   left: 0;
@@ -461,6 +479,12 @@ html span {
 
 .particulars {
   font-size: 1rem;
+}
+@media (min-width: 1180px) {
+  .particulars {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
 .particulars ul {
   width: 100%;

@@ -3,6 +3,10 @@
     margin-top: 16px;
     margin-bottom: 16px;
     background: #fff;
+    @include breakpoint($big) {
+        max-width: 1180px;
+        margin: 16px auto 16px;
+    }
     h2 {
         @include span(12);
         padding: 0 27px;

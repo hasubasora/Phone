@@ -47,6 +47,7 @@
        }
    } else {
        //否则就是PC浏览器打开
+       alert('1232')
    }
 
    window.onload = function() {
