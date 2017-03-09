@@ -1,8 +1,4 @@
 .projectDetailed {
-    @include breakpoint($big) {
-        max-width: 1180px;
-        margin: 16px auto 16px;
-    }
     @include border-radius(10px);
     background: rgb(238, 238, 238);
     margin-top: 16px;

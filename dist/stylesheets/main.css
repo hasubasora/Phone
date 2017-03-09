@@ -219,12 +219,6 @@ html span {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-@media (min-width: 1180px) {
-  .projectDetailed {
-    max-width: 1180px;
-    margin: 16px auto 16px;
-  }
-}
 .projectDetailed h2 {
   width: 100%;
   float: left;
@@ -565,7 +559,7 @@ body {
 .swiper-slide {
   /*text-align: center;*/
   font-size: 18px;
-  background: #fff;
+  background: #323232;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
