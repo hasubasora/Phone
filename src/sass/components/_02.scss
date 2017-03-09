@@ -50,36 +50,36 @@
 }
 
 .green {
-    @include tag(#22af25);
+    @include tag(#5eac82);
 }
 
 .red {
-    @include tag(#dd1111);
+    @include tag(#cb1a44);
 }
 
 .pink {
-    @include tag(#ec1470);
+    @include tag(#ef5e1b);
 }
 
 .yellow {
-    @include tag(#ffb320);
+    @include tag(#ffb11b);
 }
 
 .blue {
-    @include tag(#4cacde);
+    @include tag(#33a6b8);
 }
 
 .purple {
-    @include tag(#76428d);
+    @include tag(#a84bd1);
 }
 
 .yes {
-    @include tag(#4cacde,
+    @include tag(#33a6b8,
     1rem);
 }
 
 .no {
-    @include tag(#ffb320,
+    @include tag(#ffb11b,
     1rem);
 }
 
