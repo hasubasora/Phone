@@ -46,6 +46,62 @@
            $(this).fadeOut();
 
        });
+   }
+
+   $(function() {
+       var _move = false; //移动标记
+       var _x, _y; //鼠标离控件左上角的相对位置
+       $(".drag").mousedown(function(e) {
+           _move = true;
+           _x = e.pageX - parseInt($(".drag").css("left"));
+           _y = e.pageY - parseInt($(".drag").css("top"));
+           $(".drag").fadeTo(20, 0.5); //点击后开始拖动并透明显示
+       });
+       $(document).mousemove(function(e) {
+           if (_move) {
+               var x = e.pageX - _x; //移动时根据鼠标位置计算控件左上角的绝对位置
+               var y = e.pageY - _y;
+               $(".drag").css({
+                   top: y,
+                   left: x
+               }); //控件新位置
+           }
+       }).mouseup(function() {
+           _move = false;
+           $(".drag").fadeTo("fast", 1); //松开鼠标后停止移动并恢复成不透明
+       });
+   });
 
 
+
+   var isdrag = false;
+   var tx, x, ty, y;
+   $(function() {
+       document.getElementById("tap").addEventListener('touchend', function() {
+           isdrag = false;
+       });
+       document.getElementById("tap").addEventListener('touchstart', selectmouse);
+       document.getElementById("tap").addEventListener('touchmove', movemouse);
+   });
+
+   function movemouse(e) {
+       e.preventDefault();
+       if (isdrag) {
+           var n = tx + e.touches[0].pageX - x;
+           m = ty + e.touches[0].pageY - y;
+           $("#tap").css({
+               "left": n,
+               "top": m
+           });
+           return false;
+       }
+   }
+
+   function selectmouse(e) {
+       isdrag = true;
+       tx = parseInt(document.getElementById("tap").style.left + 0);
+       ty = parseInt(document.getElementById("tap").style.top + 0);
+       x = e.touches[0].pageX;
+       y = e.touches[0].pageY;
+       return false;
    }
