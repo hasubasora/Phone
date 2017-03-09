@@ -1,11 +1,20 @@
+@include breakpoint($big) {
+    .pcheight {
+        width: 1100px;
+        margin: 0 auto;
+    }
+}
+
 .projectFile {
     @include border-radius(8px);
     margin-top: 16px;
     margin-bottom: 16px;
     background: #fff;
+    max-height: 8.2rem;
     @include breakpoint($big) {
-        max-width: 1180px;
-        margin: 16px auto 16px;
+        // max-width: 1180px;
+        margin: 16px 9px;
+        @include span(3.8);
     }
     h2 {
         @include span(12);
