@@ -39,14 +39,13 @@
            $('.box').css('height', 'auto');
        }
        $('.pojList').on('click', function() {
-           $('.box').fadeIn();
+           $('.box').fadeToggle();
        })
-       $('.box').on('click', function(event) {
-           var event = event || e;
+       $('.box').on('click', function() {
            $(this).fadeOut();
-
        });
    }
+
 
    $(function() {
        var _move = false; //移动标记
