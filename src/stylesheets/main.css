@@ -239,7 +239,7 @@ html span {
   padding-right: 0.83333%;
   padding-left: 4.83333%;
   margin-bottom: 16px;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 24rem;
 }
 .projectDetailed ul li {
