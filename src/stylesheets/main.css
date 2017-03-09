@@ -211,9 +211,9 @@ html span {
 }
 
 .projectDetailed {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   background: #eeeeee;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -476,7 +476,7 @@ html span {
 }
 @media (min-width: 1180px) {
   .particulars {
-    max-width: 1180px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 }
