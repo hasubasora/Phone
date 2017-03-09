@@ -29,22 +29,26 @@
    }
 
 
-   window.onload = function() {
-       //        var wh = window.screen.height;
-       var wh = document.body.clientHeight //可视区
-       boxH = wh - 90;
-       var boxLi = $('.box ul li').length * $('.box ul li').height();
-       $('.boxH').css('max-height', (boxH / 16) + 'rem');
-       if (wh < boxLi) {
-           $('.box').css('height', 'auto');
-       }
-       $('.pojList').on('click', function() {
-           $('.box').fadeToggle();
-       })
-       $('.box').on('click', function() {
-           $(this).fadeOut();
-       });
+
+   //        var wh = window.screen.height;
+
+
+   var wh = document.body.clientHeight //可视区
+   boxH = wh - 90;
+   var boxLi = $('.box ul li').length * $('.box ul li').height();
+   $('.boxH').css('max-height', (boxH / 16) + 'rem');
+   if (wh < boxLi) {
+       $('.box').css('height', 'auto');
    }
+   $('.pojList').on('click', function() {
+       $('.box').fadeToggle();
+   })
+   $('.box').on('click', function() {
+       $(this).fadeOut();
+   });
+
+
+
 
 
    $(function() {
