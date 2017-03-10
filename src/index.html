@@ -202,16 +202,6 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var pageSize;
-        $(window).on('resize', function() {
-            if (document.body.clientWidth < 1300) {
-                pageSize = 3;
-            } else if (document.body.clientWidth > 1300) {
-                pageSize = 4;
-            }
-            console.log(pageSize)
-            swiperPCList();
-        })
         if (browser.versions.mobile) { //判断是否是移动设备打开。browser代码在下面
             var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
             if (ua.match(/MicroMessenger/i) == "micromessenger") {
@@ -236,35 +226,21 @@
             }
         } else {
             //否则就是PC浏览器打开
-            var mql = window.matchMedia("(max-width: 700px)");
-            // 指定回调函数
-            mql.addListener(mqCallback);
-
-            function mqCallback(mql) {
-                if (mql.matches) {
-                    pageSize = 3;
-                } else {
-                    pageSize = 4;
-                }
-                swiperPCList();
-            }
-            // 撤销回调函数
-            mql.removeListener(mqCallback);
-
+            swiperPCList();
         }
 
 
         function swiperPCList() {
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
-                slidesPerView: pageSize,
+                slidesPerView: 4,
                 paginationClickable: true,
                 spaceBetween: 30,
                 uniqueNavElements: false,
             });
             var mySwiper = new Swiper('.swiper-container', {
                 pagination: '.pagination',
-                slidesPerView: pageSize,
+                slidesPerView: 4,
                 paginationClickable: true,
                 spaceBetween: 30,
                 paginationBulletRender: function(index, className) {
