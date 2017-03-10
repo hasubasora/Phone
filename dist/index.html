@@ -133,7 +133,7 @@
                     <ul class="boxH">
                         <li>
                             <a href="#">
-                                <p class="titles">深化状状况</p>
+                                <p class="titles">深化状状深化</p>
                                 <p class="titles">
                                     <i class="bgUrl">2017-31-31</i>
                                     <b class="green">全过程跟踪</b>
@@ -202,6 +202,7 @@
 
     <!-- Initialize Swiper -->
     <script>
+        var pageDate = 4;
         if (browser.versions.mobile) { //判断是否是移动设备打开。browser代码在下面
             var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
             if (ua.match(/MicroMessenger/i) == "micromessenger") {
@@ -226,21 +227,27 @@
             }
         } else {
             //否则就是PC浏览器打开
-            swiperPCList();
+
+            if (document.body.clientWidth < 1300) {
+                swiperList()
+            } else {
+                swiperPCList();
+            }
         }
+
 
 
         function swiperPCList() {
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
-                slidesPerView: 4,
+                slidesPerView: pageDate,
                 paginationClickable: true,
                 spaceBetween: 30,
                 uniqueNavElements: false,
             });
             var mySwiper = new Swiper('.swiper-container', {
                 pagination: '.pagination',
-                slidesPerView: 4,
+                slidesPerView: pageDate,
                 paginationClickable: true,
                 spaceBetween: 30,
                 paginationBulletRender: function(index, className) {
@@ -248,6 +255,7 @@
                     return '<li class="' + className + ' colorss">一，深化设计看板上计看板上状计看板上状计看板上状计看板上状状况</li>'
                 }
             });
+
         }
 
         function swiperList() {

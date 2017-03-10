@@ -49,8 +49,6 @@
 
 
 
-
-
    $(function() {
        var _move = false; //移动标记
        var _x, _y; //鼠标离控件左上角的相对位置
