@@ -32,11 +32,13 @@
 
    //        var wh = window.screen.height;
 
-
+   var ww = document.body.clientWidth //可视区
    var wh = document.body.clientHeight //可视区
    boxH = wh - 90;
+   //    boxW = ww - 100;
    var boxLi = $('.box ul li').length * $('.box ul li').height();
    $('.boxH').css('max-height', (boxH / 16) + 'rem');
+   //    $('.projectDetailed').css('min-width', (boxW / 16) + 'rem');
    if (wh < boxLi) {
        $('.box').css('height', 'auto');
    }
