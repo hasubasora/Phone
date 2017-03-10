@@ -1,12 +1,12 @@
 // 字体大小变化
-function windowSize() {
+(function() {
     var ft = document.getElementsByTagName("html")[0]; //获取到html标签
     var s = window.screen.width; //获取屏幕的宽度
     window.onresize = function() { //屏幕尺寸改变触发
         var w = document.body.offsetWidth; //获取浏览器内容的宽度
         ft.style.fontSize = w / s * 16 + "px";
     }
-}
+})();
 
 //判断在什么设备浏览器上打开
 var browser = {
@@ -52,13 +52,20 @@ if (browser.versions.mobile) { //判断是否是移动设备打开。browser代�
     }
 } else {
     //否则就是PC浏览器打开
-    if (document.body.clientWidth < 1300 && document.body.clientWidth > 800) {
-        swiperPCList(3, 15);
-    } else if (document.body.clientWidth < 800) {
-        swiperPCList(2, 6);
-    } else {
+    Ss();
+}
+
+function Ss() {
+    if (document.body.clientWidth > 1300) {
         swiperPCList(4, 30);
     }
+    if (document.body.clientWidth < 1300 && document.body.clientWidth > 800) {
+        swiperPCList(3, 15);
+    }
+    if (document.body.clientWidth < 800) {
+        swiperPCList(2, 6);
+    }
+
 }
 
 function swiperPCList(pageDate, max) {
@@ -76,7 +83,7 @@ function swiperPCList(pageDate, max) {
         spaceBetween: max,
         paginationBulletRender: function(index, className) {
             // return '<span class="' + className + '">' + (index + 1) + '</span>';
-            return '<li class="' + className + ' colorss" data-index="' + index + '">这里是列表</li>'
+            return '<li class="' + className + ' colorss" data-index="' + index + '">' + (index + 1) + '这里是列表</li>'
         }
     });
 
@@ -93,7 +100,7 @@ function swiperList() {
         paginationClickable: true,
         paginationBulletRender: function(index, className) {
             // return '<span class="' + className + '">' + (index + 1) + '</span>';
-            return '<li class="' + className + ' colorss" data-index="' + index + '">' + index + '这里是列表</li>'
+            return '<li class="' + className + ' colorss" data-index="' + index + '">' + (index + 1) + '这里是列表</li>'
         }
     });
 }
