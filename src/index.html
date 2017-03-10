@@ -233,15 +233,15 @@
                 swiperPCList();
             }
         }
-        $(window).on('resize', function() {
-            if (document.body.clientWidth < 1300) {
-                swiperPCListTwo()
-            } else if (document.body.clientWidth > 1300) {
-                swiperPCList();
-                location.reload();
-            }
+        // $(window).on('resize', function() {
+        //     if (document.body.clientWidth < 1300) {
+        //         swiperPCListTwo()
+        //     } else if (document.body.clientWidth > 1300) {
+        //         swiperPCList();
+        //         location.reload();
+        //     }
 
-        })
+        // })
 
         function swiperPCListOne() {
             var swiper = new Swiper('.swiper-container', {
