@@ -246,6 +246,7 @@ html span {
   background: #eeeeee;
   margin-top: 16px;
   margin-bottom: 16px;
+  min-width: 95%;
 }
 .projectDetailed h2 {
   width: 100%;
