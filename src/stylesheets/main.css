@@ -248,11 +248,6 @@ html span {
   margin-bottom: 16px;
   min-width: 95%;
 }
-@media (min-width: 320px) and (max-width: 760px) {
-  .projectDetailed {
-    min-width: 300px;
-  }
-}
 .projectDetailed h2 {
   width: 100%;
   float: left;

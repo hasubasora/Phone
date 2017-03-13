@@ -4,9 +4,9 @@
     margin-top: 16px;
     margin-bottom: 16px;
     min-width: 95%;
-    @include breakpoint($sm) {
-        min-width: 300px;
-    }
+    // @include breakpoint($sm) {
+    //     min-width: 300px;
+    // }
     h2 {
         @include span(12);
         font-size: 1rem;

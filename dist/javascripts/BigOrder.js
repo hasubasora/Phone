@@ -69,6 +69,9 @@ function Ss() {
 }
 
 function swiperPCList(pageDate, max) {
+    var jsons = {
+        "phases": ["Phase 1", "Phase 2"]
+    };
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         slidesPerView: pageDate,
@@ -82,8 +85,24 @@ function swiperPCList(pageDate, max) {
         paginationClickable: true,
         spaceBetween: max,
         paginationBulletRender: function(index, className) {
-            // return '<span class="' + className + '">' + (index + 1) + '</span>';
-            return '<li class="' + className + ' colorss" data-index="' + index + '">' + (index + 1) + '这里是列表</li>'
+            var _index = index;
+            var dataAir = '';
+            $.ajax({
+                type: "post",
+                url: 'http://10.10.1.47:8069/tm/tm/list_phase/3',
+                dataType: "json",
+                success: function(data) {
+                    var _data = data.phases;
+                    // var dataAir = [];
+                    // for (var i = 0; i < _data.length; i++) {
+                    //     dataAir[_index] = _data[i];
+                    // }
+                    dataAir = _data;
+                }
+            })
+            return '<li class="' + className + ' colorss" data-index="' + index + '">' + (index + 1) + dataAir[_index] + '</li>'
+                // return '<span class="' + className + '">' + (index + 1) + '</span>';
+
         }
     });
 
